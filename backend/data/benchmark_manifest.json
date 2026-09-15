@@ -1,0 +1,121 @@
+{
+  "test_cases": [
+    {
+      "id": "genuine_ceo",
+      "file": "genuine.wav",
+      "label": "Genuine CEO (enrolled)",
+      "expected_category": "GENUINE",
+      "expected_risk_band": "LOW",
+      "expected_deepfake_max": 0.45,
+      "caller_id": "CEO-001",
+      "caller_name": "Priya Sharma (CEO)",
+      "is_known_contact": true,
+      "call_origin": "MOBILE"
+    },
+    {
+      "id": "cloned_tts",
+      "file": "cloned.wav",
+      "label": "AI-Cloned Voice (TTS)",
+      "expected_category": "TTS_SYNTHESIZED",
+      "expected_risk_band": "HIGH",
+      "expected_deepfake_min": 0.55,
+      "call_origin": "VOIP",
+      "is_known_contact": false
+    },
+    {
+      "id": "ceo_impersonation_transfer",
+      "file": "cloned_transfer.wav",
+      "label": "CEO Impersonation + ₹25L",
+      "expected_category": "TTS_SYNTHESIZED",
+      "expected_risk_band": "CRITICAL",
+      "expected_deepfake_min": 0.55,
+      "transaction_amount": 2500000,
+      "transaction_type": "FUND_TRANSFER",
+      "is_privileged_workflow": true,
+      "call_origin": "VOIP"
+    },
+    {
+      "id": "replay_fraud_registry",
+      "file": "replay.wav",
+      "label": "Replay + Fraud Registry Hit",
+      "expected_category": "REPLAY_ATTACK",
+      "expected_risk_band": "HIGH",
+      "caller_id": "FRAUD-009",
+      "phone_number": "+91-9876543210",
+      "transaction_amount": 150000,
+      "transaction_type": "WIRE_TRANSFER",
+      "call_origin": "VOIP"
+    },
+    {
+      "id": "voice_conversion",
+      "file": "voice_conversion.wav",
+      "label": "Voice Conversion (RVC)",
+      "expected_category": "VOICE_CONVERSION",
+      "expected_risk_band": "HIGH",
+      "expected_deepfake_min": 0.50,
+      "transaction_amount": 500000,
+      "transaction_type": "APPROVAL",
+      "call_origin": "UNKNOWN"
+    },
+    {
+      "id": "indic_hi_genuine",
+      "file": "indic/hi_genuine.wav",
+      "label": "Hindi — Genuine",
+      "language": "hi",
+      "expected_category": "GENUINE",
+      "expected_risk_band": "MEDIUM",
+      "expected_deepfake_max": 0.55,
+      "call_origin": "MOBILE"
+    },
+    {
+      "id": "indic_hi_cloned",
+      "file": "indic/hi_cloned.wav",
+      "label": "Hindi — AI Clone",
+      "language": "hi",
+      "expected_category": "TTS_SYNTHESIZED",
+      "expected_risk_band": "HIGH",
+      "expected_deepfake_min": 0.55,
+      "call_origin": "VOIP"
+    },
+    {
+      "id": "indic_ta_cloned",
+      "file": "indic/ta_cloned.wav",
+      "label": "Tamil — AI Clone",
+      "language": "ta",
+      "expected_category": "TTS_SYNTHESIZED",
+      "expected_risk_band": "HIGH",
+      "expected_deepfake_min": 0.55,
+      "call_origin": "VOIP"
+    },
+    {
+      "id": "indic_te_cloned",
+      "file": "indic/te_cloned.wav",
+      "label": "Telugu — AI Clone",
+      "language": "te",
+      "expected_category": "TTS_SYNTHESIZED",
+      "expected_risk_band": "HIGH",
+      "expected_deepfake_min": 0.55,
+      "call_origin": "VOIP"
+    },
+    {
+      "id": "indic_kn_cloned",
+      "file": "indic/kn_cloned.wav",
+      "label": "Kannada — AI Clone",
+      "language": "kn",
+      "expected_category": "TTS_SYNTHESIZED",
+      "expected_risk_band": "HIGH",
+      "expected_deepfake_min": 0.55,
+      "call_origin": "VOIP"
+    },
+    {
+      "id": "indic_en_in_genuine",
+      "file": "indic/en-IN_genuine.wav",
+      "label": "English-IN — Genuine",
+      "language": "en-IN",
+      "expected_category": "GENUINE",
+      "expected_risk_band": "MEDIUM",
+      "expected_deepfake_max": 0.55,
+      "call_origin": "MOBILE"
+    }
+  ]
+}

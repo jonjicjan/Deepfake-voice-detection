@@ -1,0 +1,32 @@
+{
+  "ensemble": {
+    "neural_weight": 0.9,
+    "dsp_weight": 0.1
+  },
+  "skip_dsp_when_neural_confident": true,
+  "neural_confidence_threshold": 0.85,
+  "analysis_window_seconds": 3.0,
+  "use_fp16_on_gpu": true,
+  "use_torch_compile": false,
+  "prefer_onnx": true,
+  "deepfake_threshold": 0.7,
+  "risk_weights": {
+    "deepfake": 0.4,
+    "speaker_mismatch": 0.24,
+    "prosody_anomaly": 0.16,
+    "replay": 0.1,
+    "unknown_attack": 0.1
+  },
+  "risk_thresholds": {
+    "low": 30.0,
+    "high": 65.0,
+    "critical": 85.0
+  },
+  "_note": "Auto-tune with: python backend/scripts/calibrate_from_benchmark.py",
+  "_calibrated_from_benchmark": {
+    "f1": 0.545,
+    "accuracy_pct": 54.5,
+    "timestamp": "2026-08-29T18:05:43.013330+00:00"
+  },
+  "indic_classifier_threshold": 0.7
+}

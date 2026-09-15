@@ -1,0 +1,22 @@
+{
+  "deepfake_model": {
+    "name": "MelodyMachine/Deepfake-audio-detection-V2",
+    "architecture": "Wav2Vec2-base fine-tuned for binary audio classification",
+    "pretrained_on": "Public deepfake/synthetic speech datasets (via HuggingFace Hub)",
+    "not_trained_on": "VoiceShield does NOT retrain this model on demo sine-wave audio",
+    "inference": "Pretrained weights used as-is; ensemble with DSP heuristics",
+    "honest_claim": "We detect synthesis artifacts using a publicly fine-tuned Wav2Vec2 model, not custom training on our demo files"
+  },
+  "speaker_model": {
+    "name": "speechbrain/spkrec-ecapa-voxceleb",
+    "architecture": "ECAPA-TDNN",
+    "pretrained_on": "VoxCeleb1 + VoxCeleb2 (>7,000 speakers)",
+    "eer": "< 1% on VoxCeleb1-H (published benchmark)",
+    "honest_claim": "Speaker verification uses industry-standard pretrained embeddings; enrollment stores 192-dim vectors only"
+  },
+  "indic_support": {
+    "approach": "Language-agnostic Wav2Vec2 spectral features + ECAPA speaker embeddings",
+    "status": "Evaluated on Hindi/Tamil/Telugu/Kannada/English-IN test clips",
+    "future_work": "Fine-tune on InDeepFake / IndicTTS for region-specific TTS clones"
+  }
+}

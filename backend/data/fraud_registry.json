@@ -1,0 +1,23 @@
+{
+  "flagged_caller_ids": ["FRAUD-009", "SCAM-104", "BLACKLIST-221"],
+  "flagged_phone_numbers": ["+91-9876543210", "+91-9988776655", "+91-9000012345"],
+  "flagged_names": ["Known Scammer", "Impersonator (CEO Voice)"],
+  "registry_source": "Cyber Security Cell fraud watchlist",
+  "last_updated": "2026-08-29",
+  "entries": [
+    {
+      "id": "FRAUD-009",
+      "phone": "+91-9876543210",
+      "reason": "Prior voice-cloning wire fraud attempt",
+      "incidents": 3,
+      "last_seen": "2026-08-15"
+    },
+    {
+      "id": "SCAM-104",
+      "phone": "+91-9988776655",
+      "reason": "CEO impersonation via VoIP",
+      "incidents": 2,
+      "last_seen": "2026-08-20"
+    }
+  ]
+}

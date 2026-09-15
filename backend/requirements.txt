@@ -1,0 +1,19 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.12
+websockets==13.1
+numpy==1.26.4
+librosa==0.10.2
+soundfile==0.12.1
+scipy==1.13.1
+scikit-learn==1.5.2
+pydantic==2.8.2
+aiofiles==24.1.0
+aiosqlite==0.20.0
+python-dotenv==1.0.1
+# Neural ML pipeline (Layer 1: Wav2Vec2 deepfake, Layer 2: ECAPA-TDNN speaker)
+transformers==4.44.0
+torch>=2.4.0
+torchaudio>=2.4.0
+speechbrain==1.0.0
+onnxruntime>=1.18.0
